@@ -3,15 +3,15 @@
 Abordando aqui o necessário e o que lembrar ao criar um projeto Spring seguindo os ensinamentos API RESTful.
 
 ## Base Teórica
-1. Lembrar sobre [Inversão de Controle](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
-2. [Injeção de Dependência](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
-3. [Ciclo de vida do Bean](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records) (se será Singleton, Prototype, Request ou Session)
+1. Lembrar sobre [Inversão de Controle](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#bom-primeiro-vamos-lembrar-sobre-invers%C3%A3o-de-controle)
+2. [Injeção de Dependência](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#inje%C3%A7%C3%A3o-de-depend%C3%AAncia)
+3. [Ciclo de vida do Bean](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#beans) (se será Singleton, Prototype, Request ou Session)
 <hr>
 
 ## Prática
 
-1. Configuração de Beans passando as anotações. Todas estão [aqui](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
-2. Lembrar da [arquitetura rest](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records) e suas 6 constraints obrigatórias
+1. Configuração de Beans passando as anotações. Todas estão [aqui](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#principais-anota%C3%A7%C3%B5es-spring)
+2. Lembrar da [arquitetura rest](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#-arquitetura-rest) e suas 6 constraints obrigatórias
 <hr>
 
 ## O que lembrar ao ir criando Objetos?
@@ -60,9 +60,10 @@ Essa camada é o "primeiro contato" com as requisições. Enviaremos também ao 
 
 Precisamos passar o @RequestMapping com a url onde iremos realizar as operações.
 
-[METÓDO GET](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
-[MÉTODO POST](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
-[MÉTODO PUT(DELETE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
+[METÓDO GET](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-get)
+[MÉTODO POST](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-post)
+[MÉTODO PUT(UPDATE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-put-update)
+[MÉTODO DELETE(UPDATE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-del-delete)
 <hr>
 
 ### dtos
