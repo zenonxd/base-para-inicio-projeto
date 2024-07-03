@@ -3,15 +3,15 @@
 Abordando aqui o necessário e o que lembrar ao criar um projeto Spring seguindo os ensinamentos API RESTful.
 
 ## Base Teórica
-1. Lembrar sobre [Inversão de Controle](#bom-primeiro-vamos-lembrar-sobre-inversão-de-controle)
-2. [Injeção de Dependência](#injeção-de-dependência)
-3. [Ciclo de vida do Bean](#beans) (se será Singleton, Prototype, Request ou Session)
+1. Lembrar sobre [Inversão de Controle](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
+2. [Injeção de Dependência](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
+3. [Ciclo de vida do Bean](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records) (se será Singleton, Prototype, Request ou Session)
 <hr>
 
 ## Prática
 
-1. Configuração de Beans passando as anotações. Todas estão [aqui](#principais-anotações-spring)
-2. Lembrar da [arquitetura rest](#center-arquitetura-rest) e suas 6 constraints obrigatórias
+1. Configuração de Beans passando as anotações. Todas estão [aqui](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
+2. Lembrar da [arquitetura rest](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records) e suas 6 constraints obrigatórias
 <hr>
 
 ## O que lembrar ao ir criando Objetos?
@@ -60,7 +60,9 @@ Essa camada é o "primeiro contato" com as requisições. Enviaremos também ao 
 
 Precisamos passar o @RequestMapping com a url onde iremos realizar as operações.
 
-[Veja os métodos Get, Post e Delete](https://github.com/zenonxd/spring-data-jpa-2024/blob/c95c6fce7a07d3c59fd97a300b0b661a08de2364/src/main/java/com/bookstore/jpa/controller/BookController.java#L16)
+[METÓDO GET](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
+[MÉTODO POST](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
+[MÉTODO PUT(DELETE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
 <hr>
 
 ### dtos
@@ -72,7 +74,7 @@ Mas não possui Set, pois records são imutáveis.
 
 Se atentar ainda, as anotações dentro do parâmtro, @NotBlank/@NotNull, etc.
 
-[Para ver mais](#mapeamento-dto-de-entrada-com-records)
+[Para ver mais](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
 <hr>
 
 ### repositories
