@@ -48,6 +48,8 @@ Se quisermos que um campo específico (como CPF ou Email seja unico), passaremos
 Interação do client com o nosso backend.
 **Para chamarmos os métodos criados.**
 
+Importar o service.
+
 Aqui receberemos as requisições do cliente e passaremos adiante ao Service somente as informações
 relevantes para completar a requisição.
 
