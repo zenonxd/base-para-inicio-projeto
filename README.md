@@ -48,7 +48,7 @@ Se quisermos que um campo específico (como CPF ou Email seja unico), passaremos
 Interação do client com o nosso backend.
 **Para chamarmos os métodos criados.**
 
-Importar o service.
+Importar o service (onde dentro do service teremos os repositories).
 
 Aqui receberemos as requisições do cliente e passaremos adiante ao Service somente as informações
 relevantes para completar a requisição.
@@ -100,7 +100,7 @@ Da para passar até query SQL e procurar algo por titulo da entidade.
 Regras de negócio!
 **Aqui faremos validação e verificação de métodos que iniciamos no repository.**
 
-**Terá acesso ao repository ou a outras classes do tipo Service** com autowired.
+**Terá acesso aos repositories (iremos importa-los) ou a outras classes do tipo Service** com autowired.
 
 É a camada intermediária da arquitetura MSC, responsável por abstrair as regras de negócio
 e controlar o acesso aos dados.
