@@ -17,7 +17,8 @@ Abordando aqui o necessário e o que lembrar ao criar um projeto Spring seguindo
 ## O que lembrar ao ir criando Objetos?
 
 Lembrar de dentro da pasta .spring (dentro de java), criar os packages:
-### domain
+
+### models
 Onde ficará as entidades.
 
 **Entidades** receberão os atributos que veremos na UML do projeto ou no
@@ -29,11 +30,12 @@ O que é interessante inserir:
 4. @AllArgsConstructor e se quiser noArgs também;
 5. @EqualsAndHashCode(of="aqui o que queremos, id por exemplo").
 
-Passar as anotações nos atributos.
+#### Anotações dos Atributos
 
-E notar se terá alguma relação de ManyToMany, OneToOne, etc...
+Devemos olhar os atributos e a UML e verificar se há alguma relação bidimensional.
+(ManyToMany, OneToOne...).
 
-Se tiver que implementar algum ENUM, é só criar ele e passar com @Enumetered
+Se tiver que implementar algum ENUM, é só criar o arquivo e passar no atributo com @Enumetered
 
 #### ID
 - Pode ser do tipo Long ou UUID;
@@ -42,42 +44,6 @@ Se tiver que implementar algum ENUM, é só criar ele e passar com @Enumetered
 #### Outros Campos
 Se quisermos que um campo específico (como CPF ou Email seja unico), passaremos
 @Column(unique=true)
-<hr>
-
-### controller
-Interação do client com o nosso backend.
-**Para chamarmos os métodos criados.**
-
-Importar o service (onde dentro do service teremos os repositories).
-
-Aqui receberemos as requisições do cliente e passaremos adiante ao Service somente as informações
-relevantes para completar a requisição.
-
-Essa camada é o "primeiro contato" com as requisições. Enviaremos também ao cliente a resposta
-(positiva ou negativa).
-
-- Realizar apenas operações relacionadas a Request e Response (HTTP);
-- Não possuir "conhecimento" sobre regras de negócios, ou acesso ao DB;
-- Formada quase que exclusivamente por Middlewares.
-
-Precisamos passar o @RequestMapping com a url onde iremos realizar as operações.
-
-[METÓDO GET](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-get)
-[MÉTODO POST](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-post)
-[MÉTODO PUT(UPDATE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-put-update)
-[MÉTODO DELETE(UPDATE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-del-delete)
-<hr>
-
-### dtos
-O Dto serve somente para receber o que está vindo na requisição do corpo em formato JSON.
-Em suma, é o que o cliente passará no postman, por exemplo.
-
-O dto já possui métodos prontos getters/constructores/equals&hashcode etc.
-Mas não possui Set, pois records são imutáveis.
-
-Se atentar ainda, as anotações dentro do parâmtro, @NotBlank/@NotNull, etc.
-
-[Para ver mais](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
 <hr>
 
 ### repositories
@@ -94,6 +60,18 @@ Passar anotação @Repository e só.
 
 [Exemplo de métodos pronto.](https://github.com/zenonxd/spring-data-jpa-2024/blob/c95c6fce7a07d3c59fd97a300b0b661a08de2364/src/main/java/com/bookstore/jpa/repositories/BookRepository.java#L11)
 Da para passar até query SQL e procurar algo por titulo da entidade.
+<hr>
+
+### dtos (caso o projeto tenha algum input de dados de cliente etc)
+O Dto serve somente para receber o que está vindo na requisição do corpo em formato JSON.
+Em suma, é o que o cliente passará no postman, por exemplo.
+
+O dto já possui métodos prontos getters/constructores/equals&hashcode etc.
+Mas não possui Set, pois records são imutáveis.
+
+Se atentar ainda, as anotações dentro do parâmtro, @NotBlank/@NotNull, etc.
+
+[Para ver mais](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#mapeamento-dto-de-entrada-com-records)
 <hr>
 
 ### services
@@ -115,3 +93,33 @@ do Controller são suficientes para completar a requisição.**
 - Não ter nenhum "conhecimento" sobre a camada Model (EX: Query SQL);
 - Não receber nada relacionada ao HTTP (Request ou Response).
 <hr>
+
+
+### controller
+Interação do client com o nosso backend.
+**Para chamarmos os métodos criados.**
+
+Importar o service (onde dentro do service teremos os repositories).
+
+Aqui receberemos as requisições do cliente e passaremos adiante ao Service somente as informações
+relevantes para completar a requisição.
+
+Essa camada é o "primeiro contato" com as requisições. Enviaremos também ao cliente a resposta
+(positiva ou negativa).
+
+- Realizar apenas operações relacionadas a Request e Response (HTTP);
+- Não possuir "conhecimento" sobre regras de negócios, ou acesso ao DB;
+- Formada quase que exclusivamente por Middlewares.
+
+Precisamos passar o @RequestMapping com a url onde iremos realizar as operações.
+
+[METÓDO GET](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-get)
+
+[MÉTODO POST](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-post)
+
+[MÉTODO PUT(UPDATE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-put-update)
+
+[MÉTODO DELETE(UPDATE)](https://github.com/zenonxd/springboot-michelli?tab=readme-ov-file#m%C3%A9todo-del-delete)
+<hr>
+
+
